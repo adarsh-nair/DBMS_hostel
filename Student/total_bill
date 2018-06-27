@@ -1,0 +1,2 @@
+INSERT INTO `Total_Bill`(`Hostelite_ID`, `Month`, `Total`) VALUES(1001,'07',(SELECT `Amount` FROM `Laundry_Bill` WHERE `Hostelite_ID`=1001 AND `Month`='07')+(SELECT `Amount` FROM `Food_Bill` WHERE `Hostelite_ID`=1001 AND `Month`='07'))
+

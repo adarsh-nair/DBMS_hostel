@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<title>Automatic sliding</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="auto_style.css">
+
+<style>
+.mySlides {display:none;}
+</style>
+
+<body>
+<!Navigation Bar>
+<ul>
+	<li><a href="#">HOME AWAY FORM HOME</a></li>  
+	<li style="float:right"><a href="#contact">CONTACT</a></li>
+	<li class="dropdown" style="float:right">
+		<a href="javascript:void(0)" class="dropbtn">LOGIN</a>
+		<div class="dropdown-content">
+			<a href="login.html">STUDENT</a>
+			<a href="admin.php">STAFF</a>
+		</div>
+  <li class="dropdown" style="float:right">
+    <a href="javascript:void(0)" class="dropbtn">FACILITIES</a>
+    <div class="dropdown-content">
+      <a href="#canteen">CANTEEN</a>
+      <a href="#laundry">LAUNDRY</a>
+      <a href="#trans">TRANSPORTATION</a>
+			<a href="#visitor">VISITOR STAY</a>
+			<a href="#misc">MISCELLANEOUS</a>
+    </div>
+  </li>
+	<li style="float:right"><a href="#about">ABOUT</a></li>
+	<li style="float:right"><a href="#home">HOME</a></li>
+</ul>
+
+<!Slide Show>
+
+<div class="slide" id="home">
+  <img class="mySlides" src="img_bldg.jpeg" style="width:100%; height: 600px;">
+  <img class="mySlides" src="img_room.jpg" style="width:100%; height: 600px;">
+  <img class="mySlides" src="img_corri.jpg" style="width:100%; height: 600px;">
+</div>
+
+<div style="padding-top: 60px"></div>
+
+<div class="about" id="about">
+	<div class="about_content">
+		<h2>ABOUT US </h2>
+		<p>
+			Write the information here!
+		</p>
+		<button style="background-color:#ff1a1a;border:solid #ff1a1a;color:white" onclick="document.getElementById('check').style.display='block'"> 
+			CHECK FOR VANCANCY 
+		</button>
+		<div id="check" class="modal" style="padding-top: 50px">
+			<div class="modal-content">
+			<header class="container" style="background-color:#0099cc"> 
+						<span onclick="document.getElementById('check').style.display='none'" 
+						class="button display-topright">&times;</span>
+						<h2>Rooms</h2>
+					</header>
+					<div class="container" style="color:black;">
+						<p>First Floor: <div style="color:#000!important;background-color:#d1d1d1!important">
+  <div style="color:#fff!important;background-color:#4CAF50!important;height:24px;width:25%">25%</div>
+</div><br></p>
+						<p>Second Floor: <div style="color:#000!important;background-color:#d1d1d1!important">
+  <div style="color:#fff!important;background-color:#4CAF50!important;height:24px;width:50%">50%</div>
+</div><br</p>
+						<p>Third Floor: <div style="color:#000!important;background-color:#d1d1d1!important">
+  <div style="color:#fff!important;background-color:#4CAF50!important;height:24px;width:55%">55%</div>
+</div><br</p>
+						<p>Fourth Floor: <div style="color:#000!important;background-color:#d1d1d1!important">
+  <div style="color:#fff!important;background-color:#4CAF50!important;height:24px;width:35%">35%</div>
+</div><br</p>
+						<p>Fifth Floor:<div style="color:#000!important;background-color:#d1d1d1!important">
+  <div style="color:#fff!important;background-color:#4CAF50!important;height:24px;width:25%">25%</div>
+</div><br</p>
+						<p>Sixth Floor:<div style="color:#000!important;background-color:#d1d1d1!important">
+  <div style="color:#fff!important;background-color:#4CAF50!important;height:24px;width:15%">15%</div>
+</div><br</p>
+						<p>Seventh Floor: <div style="color:#000!important;background-color:#d1d1d1!important">
+  <div style="color:#fff!important;background-color:#4CAF50!important;height:24px;width:15%">15%</div>
+</div><br</p>
+					</div>
+					<footer class="container" style="background-color:#0099cc">
+						<p></p>
+					</footer>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="fac">
+	<center><h1>FACILITIES</h1></center>	
+	<div class="row">
+	<div class="col-lg-2" id="canteen">
+  <div class="card" style="width:250px; height: 450px">
+    <img src="canteen.jpg" alt="Person" style="width:230px; height: 150px; padding-left:10px">
+    <div class="container format">
+      <h4><b>Canteen</b></h4>
+      <p>Canteen food is considered one of the biggest taboos for any student. An integrated hostel and mess system forces the child to cumpulsorily pay for the mess. Wouldn't it be better if they could decide whether they wanted to eat in the mess or not and pay for only the meals they have!!
+		</p>
+		<center>
+				<button onclick="document.getElementById('id01').style.display='block'">This Week's Menu</button>
+			</center>
+			<div id="id01" class="modal">
+				<div class="modal-content">
+					<header class="container" style="background-color:#0099cc"> 
+						<span onclick="document.getElementById('id01').style.display='none'" 
+						class="button display-topright">&times;</span>
+						<h2 style="padding-left:30px; color: #fff">Menu</h2>
+					</header>
+					<div class="container"style="padding-left:30px;"> 
+						<p>Some text..</p>
+						<p>Some text..</p>
+					</div>
+					<footer class="container" style="background-color:#0099cc; color:#fff">
+						<p style="padding-left:30px;">Students can choose to have lunch or dinner or both by selecting the option form the canteen tab present in their profile before 10 o'clock in the morning.</p>
+					</footer>
+				</div>
+			</div>
+    </div>
+  </div>
+	</div>
+	<div class="col-lg-2" id="laundry">
+	<div class="card" style="width:250px; height: 450px;">
+    <img src="laundry.jpg" alt="Person" style="width:230px; height: 150px;padding-left:10px">
+    <div class="container format">
+      <h4><b>Laundry</b></h4>
+      <p>Crumpled and dirty clothes can convert a sunny day into a gloomy one. The in-house laundry pledges it's commitment to provide your clothes with the best possible care</p>
+    </div>
+  </div>
+	</div>
+	<div class="col-lg-2" id="trans">
+  <div class="card" style="width:250px; height: 450px">
+    <img src="two_whe.jpg" alt="Person" style="width:230px; height: 150px;padding-left:10px">
+    <div class="container format">
+      <h4><b>TRANSPORTATION</b></h4>
+      <p>In a city like Pune, transportation facilities play an important role. Students require reliable means to commute but buy a two-wheeler isn't the best alternative. The hostel has it's own fleet of two-wheelers which the students can rent at reasonable rates.</p>
+    </div>
+  </div>
+	</div>
+	<div class="col-lg-2" id="visitor">
+	<div class="card" style="width:250px; height: 450px;">
+    <img src="parents.png" alt="Person" style="width:230px; height: 150px;padding-left:10px">
+    <div class="container format">
+      <h4><b>VISTORS</b></h4>
+      <p>Usually when parents come to stay with their children they have to use hotel rooms which prove to be quite expensive. The hostel has some buffer rooms that the hostel allocates to the parents so that they can stay in the same premises.</p>
+    </div>
+  </div>
+	</div>
+	<div class="col-lg-2" id="misc">
+	<div class="card" style="width:250px; height: 450px;">
+    <img src="groceries.png" alt="Person" style="width:230px; height: 150px;padding-left:10px">
+    <div class="container format">
+      <h4><b>MISCELLANEOUS</b></h4>
+      <p>Wish you had some bread, butter and cheese to fix your self a sandwich, just drop in a list of items in your cart. You'll have your items by noon.</p>
+    </div>
+  </div>
+	</div>
+</div>
+
+	<footer id="contact" class="container footer-main
+">
+		<center><h3>Come Home to a Home away from Home </h3></center>
+		<div class="row" style="padding-top: 5px; padding-bottom:5px;">
+			<div class="half">
+				<h4 style="padding-left: 450px">
+					Postal Address</br></br>
+					Vastushree</br>
+					Plot No. 56,</br>
+					Trimoorti Chowk,</br>
+					Katraj, Pune - 39.</br>
+				</h4>
+			</div>
+			<div class="half" style="padding-top: 20px;">					
+				<h4> Email-id : query@vastushree.in </h4>
+				<h4> Contact No: 9595637720 </h4>
+			</div>
+		</div>
+	</footer>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 6000); // Change image every 6 seconds
+}
+</script>
+
+</body>
+</html>
+

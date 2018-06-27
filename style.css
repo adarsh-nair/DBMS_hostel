@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+html, body {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.7rem;
+  font-family: "Droid Serif";
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  line-height: 1.2;
+  color: #fff;
+  z-index: 2;
+}
+
+div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+	margin-top:50px;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+div:nth-of-type(1) {
+  background-color: #f06868;
+}
+div:nth-of-type(2) {
+  background-color: #fab57a;
+}
+div:nth-of-type(3) {
+  background-color: #edf798;
+}
+div:nth-of-type(4) {
+  background-color: #80d6ff;
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: 0;
+  width: 10px;
+  height: 25%;
+  outline: 10px solid;
+  outline-offset: -10px;
+  margin: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+input[type="radio"]:nth-of-type(1) {
+  outline-color: #f06868;
+  top: 0%;
+}
+input[type="radio"]:nth-of-type(2) {
+  outline-color: #fab57a;
+  top: 25%;
+}
+input[type="radio"]:nth-of-type(3) {
+  outline-color: #edf798;
+  top: 50%;
+}
+input[type="radio"]:nth-of-type(4) {
+  outline-color: #80d6ff;
+  top: 75%;
+}
+input[type="radio"]:checked + div {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: -webkit-transform 0.4s ease 0.4s;
+  transition: -webkit-transform 0.4s ease 0.4s;
+  transition: transform 0.4s ease 0.4s;
+  transition: transform 0.4s ease 0.4s, -webkit-transform 0.4s ease 0.4s;
+}

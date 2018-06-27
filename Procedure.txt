@@ -1,0 +1,20 @@
+$queue = 'DELIMITER //
+CREATE PROCEDURE Queue(Hostelite_ID INT, Name VARCHAR(20), Relation VARCHAR(20), Contact VARCHAR(10), Date_of_Visit DATE, Date_of_Departure DATE, Time_IN TIME,Date_of_Request DATE)
+BEGIN
+	INSERT INTO `Visitor_Queue`(`Hostelite_ID`, `Name`, `Relation`, `Contact`, `Date_of_Visit`, `Time_IN`, `Date_of_Departure`, `Date_of_Request`) VALUES(Hostelite_ID,Name,Relation,Contact,Date_of_Visit,Time_IN,Date_of_Departure,Date_of_Request);
+END//
+DELIMITER ;';
+
+DELIMITER //
+CREATE PROCEDURE Wish_check(OUT cnt INT, IN d_start DATE, IN d_end DATE)
+BEGIN
+	DECLARE c INT DEFAULT 0;
+	DECLARE cur1 CURSOR FOR SELECT COUNT(Sr_No) from Wish_list WHERE Date >= d_start AND Date <= d_end;
+	DECLARE CONTINUE HANDLER FOR NOT FOUND set c = 1;
+	OPEN cur1;
+	WHILE c = 0 DO
+		FETCH cur1 INTO cnt;
+	END WHILE;
+	CLOSE cur1;
+END//
+	

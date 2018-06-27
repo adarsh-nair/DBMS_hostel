@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<title>Automatic sliding</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="auto_style.css">
+</head>
+
+<body>
+	<ul>
+		<li><a href="auto.html">HOME AWAY FROM HOME</a><li>
+		<li style="float:right"><a href="#contact">CONTACT</a></li>
+		<li style="float:right"><a href="signin.html">SIGN IN</a></li>
+	</ul>
+		<div class="col-lg-offset-4 col-lg-4" style="padding-top: 50px; padding-bottom: 50px;">
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+					<header class="form-header">
+						<h2>FORGOT PASSWORD</h2>
+					</header>
+					<div class="form-group">
+							<label for="eid">Email ID:</label>
+							<input type="text" class="form-control" placeholder="Registered Email ID" id="eid" pattern="[A-Za-z0-9._]{5,15}@[a-z]{4,9}.[a-z]{2,4}">
+					</div>
+					</br>  
+				<button type ="submit" style="color:#fff; margin-left: 150px">SUBMIT</button>
+		  </form>
+		</div>
+	<footer id="contact" class="container footer-main" style="margin-top:220px">
+		<center><h3>Come Home to a Home away from Home </h3></center>
+		<div class="row" style="padding-top: 5px; padding-bottom:5px;">
+			<div class="half">
+				<h4 style="padding-left: 450px">
+					Postal Address</br></br>
+					Vastushree</br>
+					Plot No. 56,</br>
+					Trimoorti Chowk,</br>
+					Katraj, Pune - 39.</br>
+				</h4>
+			</div>
+			<div class="half" style="padding-top: 20px;">					
+				<h4> Email-id : query@vastushree.in </h4>
+				<h4> Contact No: 9595637720 </h4>
+			</div>
+		</div>
+	</footer>
